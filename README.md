@@ -1,3 +1,3 @@
-# Web-template
+# Form validation
 
-A simple template useful for future projects
+A simple exercise for doing the validation in a form

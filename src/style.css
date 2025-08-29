@@ -83,6 +83,83 @@ button {
 
 /* end of the reset */
 
-body {
-  background-color: blue;
+#container {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  height: 100vh;
+}
+
+#left {
+  background-color: black;
+  grid-column: 1/2;
+}
+
+#right {
+  background-color: black;
+  grid-column: 3/4;
+}
+
+#space {
+  background-color: lightblue;
+  grid-column: 2/3;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-right: 10%;
+}
+
+#space > h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+}
+
+input {
+  min-width: 400px;
+}
+
+select {
+  min-width: 200px;
+  display: block;
+}
+
+form {
+  margin-top: 5%;
+}
+
+span {
+  color: red;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.error-email,
+.error-code,
+.error-password,
+.error-cpassword {
+  color: white;
+  background-color: red;
+  font-size: 80%;
+  border-radius: 0 0 5px 5px;
+  display: block;
+  width: 400px;
+  padding: 0;
+}
+
+.error-country {
+  color: white;
+  background-color: red;
+  font-size: 80%;
+  border-radius: 0 0 5px 5px;
+  display: block;
+  width: 200px;
+  padding: 0;
+  margin-top: 0;
+}
+
+.error-email.active {
+  padding: 0.2rem;
 }
