@@ -163,3 +163,19 @@ button {
 .error-email.active {
   padding: 0.2rem;
 }
+
+input:invalid {
+  border: solid 1px red;
+}
+
+input:valid {
+  border: solid 1px green;
+}
+
+.postal-code.error {
+  border: solid 1px red;
+}
+
+.confirm-password.error {
+  border: solid 1px red;
+}

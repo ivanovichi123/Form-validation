@@ -73,15 +73,19 @@ function checkPostalCode() {
 
   const countryV = document.getElementById("country").value;
   const constraint = new RegExp(constraints[countryV][0], "");
+  let postalInput = document.querySelector("#postal-code");
 
   if (constraint.test(postalCode.value)) {
     postalCodeError.textContent = "";
+    postalInput.className = "postal-code";
     return false;
   } else if (postalCode.value === "") {
     postalCodeError.textContent = "You need to put a postal code";
+    postalInput.className = "postal-code error";
     return true;
   } else {
     postalCodeError.textContent = constraints[countryV][1];
+    postalInput.className = "postal-code error";
     return true;
   }
 }
@@ -119,14 +123,15 @@ confirmPassword.addEventListener("input", (event) => {
 });
 
 function checkPasswords() {
+  let confirmPasswordInputError = document.querySelector("#confirm-password");
   if (confirmPassword.value !== password.value) {
     confirmPasswordError.textContent = "The passwords do not match";
     passwordError.className = "error-cpassword active";
+    confirmPasswordInputError.className = "confirm-password error";
     return true;
   } else {
     confirmPasswordError.textContent = "";
     passwordError.className = "error-cpassword";
+    confirmPasswordInputError.className = "confirm-password";
   }
 }
-
-
